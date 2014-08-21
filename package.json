@@ -1,0 +1,29 @@
+{
+  "name": "tbcnode100",
+  "version": "0.0.1",
+  "description": "TBC node.js 100",
+  "dependencies": {
+    "bluebird": "~0.11.5-0",
+    "co": "~3.0.2",
+    "gens": "~1.0.2",
+    "lodash": "~2.4.1",
+    "promise-it-wont-hurt": "git://github.com/stevekane/promise-it-wont-hurt.git",
+    "step": "0.0.5",
+    "q": "~0.9.7",
+    "request": "~2.27.0",
+    "thunker": "0.0.4",
+    "traceur": "0.0.32",
+    "trycatch": "^1.4.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitli.corp.linkedin.com:moblight/tbcnode100.git"
+  },
+  "author": "Adam Crabtree",
+  "license": "MIT",
+  "main": "index.js"
+}

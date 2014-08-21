@@ -1,0 +1,42 @@
+{
+  "name": "promise-it-wont-hurt",
+  "version": "0.1.1",
+  "description": "This is a Workshop module for learning about promises in node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:stevekane/promise-it-wont-hurt.git"
+  },
+  "keywords": [
+    "nodeschool",
+    "promises"
+  ],
+  "author": {
+    "name": "Steven Kane"
+  },
+  "license": "BSD",
+  "bin": {
+    "promise-it-wont-hurt": "./promise.js"
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "workshopper": "~0.4.1",
+    "q": "~0.9.7",
+    "q-io": "~1.10.6",
+    "node-uuid": "~1.4.1",
+    "lodash": "~2.4.1"
+  },
+  "readme": "# Promises Workshop for Javascript!\n\n### Learn to wield promises like a master to write clean asynchronous code\n\n#### Uses the popular \"Q\" library as a default implementation of Promises/A+\n\n## Mission\n\nPromises offer a very powerful abstraction for obtaining values asynchronously.  \nAs javascript is a async-first language it is important to understand the options\nyou have for handling asynchronicity.  \n\nYou will learn the ins and outs of promises including error handling, value propagation,\nsynchronous returns, and composition.\n\nBy the end of the workshop you will be comfortable using Q to work with promises\nAND writing your own functions that leverage promises to provide clean abstractions\nand error handling.\n\n## Installation & Update\n\nCreate a new directory to do your workshop work in.  Let's call it \"promise-shop\".\nYou will need to initialize npm in this repo and then use npm to install \"q\".\n\n```\n$ mkdir promise-shop && cd promise-shop\n$ npm init\n$ npm install q\n$ npm install -g promise-it-wont-hurt@latest\n```\n\n**Note**: the workshop is being updated weekly. \nPlease regularly rerun the above command to get the latest set of exercises.\n\n## Usage Instructions\n\n#### 1. Selecting a problem to work on\n\nOnce the workshop is installed, run `promise-it-wont-hurt` to print a menu\nwhere you can select a problem to work on.\n\n```\n$ promise-it-wont-hurt\n```\n\nProblems are listed in rough order of difficulty. You are advised to complete them in order, as later problems\nwill build on skills developed by solving previous problems.\n\n#### 2. Writing your solution\n\nOnce you have selected a problem, the workshop will remember which problem you are working on. \nUsing your preferred editor, simply create a file to write your solution in.\n\n#### 3. Testing your solution\n\nUse the workshop's `run` command to point the workshop at your solution file. Your solution will loaded \nand passed the problem input. This usually won't perform any validation, it will only show the program output.\n\n```\n$ promise-it-wont-hurt run mysolution.js\n```\n \n#### 4. Verifying your solution\n\nYour solution will be verified against the output of the 'official' solution. \nIf all of the output matches, then you have successfully solved the problem!\n\n```\n$ promise-it-wont-hurt verify mysolution.js\n```\n\n## Stuck?\n\nFeedback and criticism is welcome, please log your troubles in [issues](https://github.com/stevekane/promise-it-wont-hurt/issues). \n\n## Screenshots\n![Promise it won't hurt](https://raw.github.com/stevekane/promise-it-wont-hurt/master/promiseitwonthurt.png)\n\n## Resources\n\n## Thanks rvagg\n\nThis tutorial was built using rvagg's [workshopper](https://github.com/rvagg/workshopper) framework.\n\n## Licence\n\nMIT\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/stevekane/promise-it-wont-hurt/issues"
+  },
+  "homepage": "https://github.com/stevekane/promise-it-wont-hurt",
+  "_id": "promise-it-wont-hurt@0.1.1",
+  "_shasum": "e8dd1de90cc36ac7b93c51b0bb19d1444c93d148",
+  "_resolved": "git://github.com/stevekane/promise-it-wont-hurt.git#9e48655dcb69e09ad719885b2e0ef576492b29b0",
+  "_from": "promise-it-wont-hurt@git://github.com/stevekane/promise-it-wont-hurt.git"
+}
