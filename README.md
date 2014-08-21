@@ -19,7 +19,7 @@ On freenode.net \#noderietybootcamp
 * 2:15p: [Common Modules](http://eirikb.github.io/nipster/): [request](https://github.com/mikeal/request), [lodash](lodash.com/docs)
 * 2:45p: Module Lifetime: Require, configure, initialize
 * 3:00p: Asynchrony Contracts: Callbacks and Promises A+
-* 3:30p: [Control-flow: Promises](http://www.slideshare.net/async_io/javascript-promisesq-library-17206726)
+* 3:30p: Control-flow: Promises
 * 4:00p: ES6 
 * 4:30p: WORKSHOP: [Promise It Won't Hurt](http://nodeschool.io/#promiseitwonthurt)
 * 6:30p: End
