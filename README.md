@@ -8,9 +8,9 @@ On freenode.net \#noderietybootcamp
 
 ##Schedule
 
-* 09:00: [Intro to node.js, callbacks and non-blocking IO](http://www.slideshare.net/ArtemisaYescasEngler/about-nodejs)
-* 09:15: [EventEmitter](http://www.slideshare.net/ArtemisaYescasEngler/about-nodejs/19)
-* 09:45: [require, module, node_modules, npm, package.json](http://www.slideshare.net/ArtemisaYescasEngler/about-nodejs/45)
+* 09:00: [Intro to node.js, callbacks and non-blocking IO](https://github.com/Noderiety/node100/blob/master/Intro_EventEmitter_Modules.pdf)
+* 09:15: [EventEmitter](https://github.com/Noderiety/node100/blob/master/Intro_EventEmitter_Modules.pdf)
+* 09:45: [require, module, node_modules, npm, package.json](https://github.com/Noderiety/node100/blob/master/Intro_EventEmitter_Modules.pdf)
 * 10:45: [Debugging](https://github.com/node-inspector/node-inspector) ([On IntelliJ](http://www.jetbrains.com/idea/webhelp/running-and-debugging-node-js.html))
 * 11:00: WORKSHOP: [Learn You The Node.js For Much Win!](http://nodeschool.io/#learn-you-node) (stop at "Time Server")
 * 12:00: Lunch
