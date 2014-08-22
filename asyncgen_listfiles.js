@@ -9,7 +9,14 @@ let _ = require('lodash')
 fs = thunker(fs)
 
 function* statFile(filePath) {
-	var stat = yield fs.stat(filePath)
+	try {
+		var stat = yield fs.stat(filePath)
+	} catch(e) {
+		// Ignore bad symlinks
+		if (e.code !== 'ENOENT') throw e
+		return []
+	}
+
 	if (stat.isDirectory()) {
 		return yield listDir(filePath)
 	} else {
@@ -19,18 +26,20 @@ function* statFile(filePath) {
 
 function* listDir(dir) {
 	var files = yield fs.readdir(dir)
-	return yield files.map(function(fileName) {
+		, fileList
+
+	fileList = yield files.map(function(fileName) {
 		var filePath = path.join(dir, fileName)
 		return statFile(filePath)
 	})
+	return _.flatten(fileList)
 }
 
 co(function* () {
-	_(yield listDir(__dirname))
-	.flatten()
-	.each(function(filePath) {
-		console.log(filePath)
-	})
+	(yield listDir(__dirname))
+		.forEach(function(filePath) {
+			console.log(filePath)
+		})
 
 	// Or, call a generator, but don't wait
 	co(listDir)(__dirname)
