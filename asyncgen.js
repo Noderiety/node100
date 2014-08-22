@@ -5,17 +5,17 @@ let co = require("co")
 let request = require('request')
 
 co(function* () {
-	var a = fs.readFile.bind(null, __filename);
-	var b = request.bind(null, 'http://google.com');
-	function c(fn) {
+	var readFileThunk = fs.readFile.bind(null, __filename);
+	// var b = request.bind(null, 'http://google.com');
+	function manualThunk(callback) {
 		process.nextTick(function() {
-			fn(null, true)
+			callback(null, true)
 		})
 	}
 
-  var res = yield [a, b, c];
+  var res = yield [readFileThunk, manualThunk];
 
-  console.log(res[1].headers)
+  console.log(res)
   return 'success!'
 })(function(err, result) {
   if (err) throw err

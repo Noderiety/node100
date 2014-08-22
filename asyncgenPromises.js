@@ -8,10 +8,12 @@ let request = require('request')
 
 co(function* () {
   var headers = yield function *() {
-		var a = fs.readFileAsync(__filename);
-		var b = request.bind(null, 'http://google.com');
+		var readFilePromise = fs.readFileAsync(__filename);
+		var requestThunk = request.bind(null, 'http://google.com');
 
-	  return (yield [a, b])[1].headers;
+		var values = yield [readFilePromise, requestThunk]
+		console.log(values[1].headers)
+	  return values
   }
 
   return headers
