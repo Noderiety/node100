@@ -1,19 +1,21 @@
 var assert = require('assert')
 
-function* gen() {
-	console.log('entering');
-  console.log(yield 1);
-	console.log('processing');
-  assert(yield 2, true);
-	console.log('returning');
-  return 3;
+function* gen(start) {
+	console.log('2: ', start);
+
+	var one = yield 100
+	console.log('5: ', one);
+
+	var two = yield 200
+  console.log('8: ', two);
+
+  return 300;
 }
-
-var g = gen();
-
+var it = gen('zero');
 console.log(1)
-console.log(g.next());
-console.log(2)
-console.log(g.next('here'));
-console.log(3)
-console.log(g.next(true));
+console.log('3: ', it.next());
+console.log(4)
+console.log('6: ', it.next('ONE_'));
+console.log(7)
+console.log('9: ', it.next('TWO_'));
+console.log(it.next())
