@@ -18,7 +18,7 @@ function promiseExample() {
 	return q.all([
 		q.ncall(fs.readFile, __filename),
 		q.ncall(fs.readFile, __filename)
-	]).then(function(err, datas) {
+	]).then(function(datas) {
 		return datas[0].length + datas[1].length
 	})
 }
