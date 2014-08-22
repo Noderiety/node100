@@ -10,6 +10,7 @@ fs = thunker(fs)
 
 function* statFile(filePath) {
 	try {
+		// Stat current file path
 		var stat = yield fs.stat(filePath)
 	} catch(e) {
 		// Ignore bad symlinks
@@ -17,6 +18,8 @@ function* statFile(filePath) {
 		return []
 	}
 
+	// If file is a directory...
+	// recursively list all files
 	if (stat.isDirectory()) {
 		return yield listDir(filePath)
 	} else {
@@ -25,23 +28,26 @@ function* statFile(filePath) {
 }
 
 function* listDir(dir) {
-	var files = yield fs.readdir(dir)
-		, fileList
+	// Get all filenames in current directory
+	let files = yield fs.readdir(dir)
+		, fileNames
+		, fileNamesIts
 
-	fileList = yield files.map(function(fileName) {
-		var filePath = path.join(dir, fileName)
+	// Stat all the filenames
+	fileNamesIts = files.map(function(name) {
+		var filePath = path.join(dir, name)
 		return statFile(filePath)
 	})
-	return _.flatten(fileList)
+	fileNames = yield fileNamesIts
+	return _.flatten(fileNames)
 }
 
 co(function* () {
-	(yield listDir(__dirname))
-		.forEach(function(filePath) {
-			console.log(filePath)
-		})
-
-	// Or, call a generator, but don't wait
-	co(listDir)(__dirname)
+	let files = yield listDir(__dirname)
+	files.forEach(function(filePath) {
+		console.log(filePath)
+	})
 })()
+console.log('done.')
+
 
