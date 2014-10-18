@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/Users/crabdude/.npmprefix/bin/npm', 'init' ]
+2 info using npm@1.4.10
+3 info using node@v0.11.14
+4 silly package data undefined
+5 info init written successfully
+6 error Error: canceled
+6 error     at Interface.<anonymous> (/Users/crabdude/.npmprefix/lib/node_modules/npm/node_modules/read/lib/read.js:66:13)
+6 error     at Interface.emit (events.js:104:17)
+6 error     at Interface._ttyWrite (readline.js:676:16)
+6 error     at ReadStream.onkeypress (readline.js:108:10)
+6 error     at ReadStream.emit (events.js:110:17)
+6 error     at readline.js:1157:14
+6 error     at Array.forEach (native)
+6 error     at emitKeys (readline.js:975:10)
+6 error     at ReadStream.onData (readline.js:892:14)
+6 error     at ReadStream.emit (events.js:107:17)
+7 error If you need help, you may report this *entire* log,
+7 error including the npm and node versions, at:
+7 error     <http://github.com/npm/npm/issues>
+8 error System Darwin 14.0.0
+9 error command "node" "/Users/crabdude/.npmprefix/bin/npm" "init"
+10 error cwd /Users/crabdude/Dropbox/Noderiety/node100/test
+11 error node -v v0.11.14
+12 error npm -v 1.4.10
+13 verbose exit [ 1, true ]

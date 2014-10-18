@@ -1,10 +1,10 @@
+// Require, Configure, Initialize
 // Require
 // Core modules
 let http = require('http')
 	, fs = require('fs')
 // Packages
 	, minimist = require('minimist')
-	, _ = require('lodash')
 // Modules
 	, app = require('./app')
 // variables
@@ -13,16 +13,20 @@ let http = require('http')
 	, host = argv.host || '127.0.0.1'
 // Undefined
 	, server
-	, options
+	, configureFile
 
-function configureSync(options) {
-	return options || fs.readFileSync('./configure')
+module.exports.configureSync = function configureSync(options) {
+	configureFile = fs.readFileSync(options.dir || './configure')
 }
 
-options = _.extend(configureSync(options), argv)
+let modulesStructure = require('modules_structure')
+// other requires...
+
+modulesStructure.configureSync({dir: __dirname})
 
 // Configure
-server = http.createServer(function(req, res) {
+server = http.createServer()
+server.on('request', function(req, res) {
 	setTimeout(function() {
 		res.end('hello world\n')
 	}, 1000)
@@ -30,6 +34,10 @@ server = http.createServer(function(req, res) {
 
 // Initialization
 app.listen(port, host, () => console.log('Server started on port 8000'))
+
+// 1. Require: syncIO allowed
+// 2. Configure: no IO, primarily construction
+// 3. Initialize: asyncIO (NO SYNC IO!!!)
 
 // Bootstrap protection
 if (process.env.NODE_ENV !== 'production') {
