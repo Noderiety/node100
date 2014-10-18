@@ -1,17 +1,16 @@
-var assert = require('assert')
-
 function* gen(start) {
 	console.log('2: ', start);
 
-	var one = yield 100
+	let one = yield 100
 	console.log('5: ', one);
 
-	var two = yield 200
+	let two = yield 200
   console.log('8: ', two);
 
   return 300;
 }
-var it = gen('zero');
+
+let it = gen('zero');
 console.log(1)
 console.log('3: ', it.next());
 console.log(4)

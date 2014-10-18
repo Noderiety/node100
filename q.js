@@ -1,47 +1,39 @@
-var q = require('q');
-console.log(1);
-
-foo = q.nbind(foo);
-bar = q.nbind(bar);
-readDir = q.nbind(fs.readdir);
+let fs = require('fs'),
+		q = require('q'),
+		foo = q.denodeify(foo),
+		bar = q.denodeify(bar),
+		readDir = q.denodeify(fs.readdir)
 
 q.all([
 	foo(),
 	foo(),
 	foo()
 ]).then(function(dataArray) {
-	console.log(8);
 	assert(data === undefined)
 })
-.done();
-console.log(3);
+.done()
 
-var value;
+var value
 function foo() {
-	var promiseOrValue = value || bar();
+	var promiseOrValue = value || bar()
 
-	console.log(2);
 	return q.when(promiseOrValue)
 		.then(function(data) {
-			return q.reject(new Error('asdf'));
-			console.log(6);
-			return readDir(__dirname);
+			return q.reject(new Error('asdf'))
+			return readDir(__dirname)
 		})
 		.then(function(files) {
-			console.log(7);
-			assert(Array.isArray(files));
-			return value = data;
-		});
+			assert(Array.isArray(files))
+			return value = data
+		})
 }
 
 function bar() {
-	var d = q.defer();
-	console.log(4);
-  fs.readFile(__filename, function(err, data) {
-		console.log(5);
-  	if (err) return d.reject(err);
-  	d.resolve(data);
-  });
+	var d = q.defer()
+  fs.readFile(__filename, (err, data) => {
+  	if (err) return d.reject(err)
+  	d.resolve(data)
+  })
 
-	return d.promise;
+	return d.promise
 }
