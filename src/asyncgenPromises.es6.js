@@ -1,17 +1,18 @@
-let q = require('bluebird')
+let q = require('q')
 	, fs = require('fs')
 	, co = require("co")
 	, request = require('request')
-	, requestUrl = 'http://google.com'
+	// , requestUrl = 'http://google.com'
+	, readFile = q.denodeify(fs.readFile)
 
-q.promisifyAll(fs);
+function* makeRequest(requestUrl) {
+	return yield request.bind(null, requestUrl);
+}
+
 
 co(function* () {
-	let readFilePromise = fs.readFileAsync(__filename);
-	let requestThunk = request.bind(null, requestUrl);
-
-	return yield [readFilePromise, requestThunk]
+	return yield makeRequest(String(yield readFile('./url.txt')))
 })((err, result) => {
-  if (err) throw err
-  console.log(result)
+  if (err) return console.log(err.stack)
+  console.log(String(result))
 })

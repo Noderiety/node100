@@ -25,6 +25,63 @@
   * [Promise It Won't Hurt](https://github.com/stevekane/promise-it-wont-hurt)
 * 6:30p: End
 
+##Preparation
+Install [nvm](https://github.com/creationix/nvm):
+
+```
+# Mac / Linux
+curl https://raw.githubusercontent.com/creationix/nvm/v0.17.2/install.sh | bash
+
+# Windows
+npm install -g n
+```
+
+Install latest:
+
+```
+# Mac / Linux
+nvm install v0.11 # Current version is >= 0.11.14
+
+# Windows
+n latest
+```
+
+Or, install stable:
+
+```
+# Mac / Linux
+nvm install v0.10 # Current version is >= 0.10.32
+
+# Windows
+n stable
+```
+
+Set npm install directory:
+
+```
+# Mac / Linux
+mkdir ~/.npmprefix
+npm config set prefix ~/.npmprefix
+
+# Windows
+# Necessary?
+```
+
+and add to PATH:
+
+```
+# Mac
+echo 'export PATH=`npm config get prefix`/bin:$PATH' >> ~/.bash_profile
+source ~/.bash_profile
+
+# Linux
+echo 'export PATH=`npm config get prefix`/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+
+# Windows
+# Necessary?
+```
+
 ##Workshops
 ####Assigned workshops:
 1. [Learn You The Node.js For Much Win!](http://nodeschool.io/#learn-you-node)

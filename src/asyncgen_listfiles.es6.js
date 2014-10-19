@@ -1,5 +1,4 @@
 // List all files recursively within a directory with maximum parallelism
-"use strict";
 let path = require('path')
 let fs = require('fs')
 let thunker = require('thunker')
