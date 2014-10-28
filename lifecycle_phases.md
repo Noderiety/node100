@@ -2,30 +2,29 @@
 
 1. Require: Startup phase 
 
-	* Duration: process start to end of main tick
+	* When: process start to end of main tick
 	* Before configure
-	* Sync blocking IO
-	* Blocking is okay
-	* *Sync okay
+	* Synchronous blocking IO
 	* Load config data from file
+	* Synchronous blocking constructors
+		
 
-1.b
-	* Synchronous blocking IO construction
+2. Configure: Contruct all your objects phase
 
-2. Configure: Contruct all your object phase
-
+	* When: process start to end of main tick
 	* Duration: process start to end of main tick
 	* After configure
-  * Construct objects from config data
-  * No IO!
+    * Construct objects from config data
+    * No IO!
 
 3. Initialization Phase
 
-  * Async IO
-  * No sync IO
+    * When: Post-construction, pre-request
+    * Async IO only
 
 4. General
 
-  * No sync IO
+    * When: Accepting requests
+    * No sync IO
 
 

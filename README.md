@@ -9,21 +9,24 @@
 ##Schedule
 
 * 09:30: [Intro to node.js, callbacks and non-blocking IO](https://github.com/Noderiety/node100/blob/master/Intro_EventEmitter_Modules.pdf?raw=true)
-* 09:45: [EventEmitter](https://github.com/Noderiety/node100/blob/master/Intro_EventEmitter_Modules.pdf?raw=true)
-* 10:00: [require, module, node_modules, npm, package.json](https://github.com/Noderiety/node100/blob/master/Intro_EventEmitter_Modules.pdf?raw=true)
-* 10:45: [Debugging](https://github.com/node-inspector/node-inspector) ([On IntelliJ](http://www.jetbrains.com/idea/webhelp/running-and-debugging-node-js.html))
-* 11:00: Error handling: `uncaughtException`, `throw`, callbacks, `try`/`catch` & [trycatch](https://github.com/CrabDude/trycatch)
-* 11:45: Lunch
-* 1:15p: [Core modules](http://nodejs.org/api/all.html): [path](http://nodejs.org/api/path.html), [querystring](http://nodejs.org/api/querystring.html), [utils](http://nodejs.org/api/util.html), [url](http://nodejs.org/api/url.html), [process](http://nodejs.org/api/process.html), [fs](http://nodejs.org/api/fs.html), [cluster](http://nodejs.org/api/cluster.html)
-* 1:30p: [Common Modules](http://eirikb.github.io/nipster/): [request](https://github.com/mikeal/request), [lodash](lodash.com/docs)
-* 1:45p: Module Lifetime: Require, configure, initialize
-* 2:15p: Asynchrony Contracts: Callbacks and Promises A+
-* 2:45p: Control-flow: Promises
-* 3:45p: Control-flow: Async Generators
-* 4:30p: Workshops: 
+* 10:00: [EventEmitter](https://github.com/Noderiety/node100/blob/master/Intro_EventEmitter_Modules.pdf?raw=true)
+* 10:15: [require, module, node_modules, npm, package.json](https://github.com/Noderiety/node100/blob/master/Intro_EventEmitter_Modules.pdf?raw=true)
+* 11:00: [Debugging with node-inspector](https://github.com/node-inspector/node-inspector) ([On IntelliJ](http://www.jetbrains.com/idea/webhelp/running-and-debugging-node-js.html))
+* 11:15: Error handling: `uncaughtException`, `throw`, callbacks, `try`/`catch` & [trycatch](https://github.com/CrabDude/trycatch)
+* **11:30: Lunch**
+* 12:30: [Core modules](http://nodejs.org/api/all.html): [path](http://nodejs.org/api/path.html), [querystring](http://nodejs.org/api/querystring.html), [utils](http://nodejs.org/api/util.html), [url](http://nodejs.org/api/url.html), [process](http://nodejs.org/api/process.html), [fs](http://nodejs.org/api/fs.html), [cluster](http://nodejs.org/api/cluster.html)
+* 12:45: [Common Modules](http://eirikb.github.io/nipster/): [request](https://github.com/mikeal/request), [lodash](lodash.com/docs)
+* 1:00p: Workshops: 
   * [Learn You The Node.js For Much Win!](https://github.com/rvagg/learnyounode)
+* 2:00p: Control-flow: Callbacks
+* 2:15p: Control-flow: Promises
+* 3:00p: Asynchrony Contracts: Callbacks and Promises A+
+* **3:15p: Break**
+* 3:30p: Control-flow: Async Generators
+* 3:45p: Module Lifetime: Require, configure, initialize
+* 4:00p: Workshops:
   * [Promise It Won't Hurt](https://github.com/stevekane/promise-it-wont-hurt)
-* 6:30p: End
+* 5:00p: End
 
 ##Preparation
 Install [nvm](https://github.com/creationix/nvm):
