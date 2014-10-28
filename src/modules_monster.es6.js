@@ -22,5 +22,4 @@ class Monster extends Character {
   }
 }
 
-module.exports.Monster = Monster
-module.exports.Character = Character
+module.exports = Monster
