@@ -9,11 +9,12 @@
     "lodash": "^2.4.1",
     "promise-it-wont-hurt": "git://github.com/stevekane/promise-it-wont-hurt.git",
     "q": "~0.9.7",
+    "rc": "^0.5.1",
     "request": "~2.27.0",
+    "songbird": "^1.0.1",
     "step": "0.0.5",
     "thunker": "0.0.4",
     "traceur": "0.0.32",
-    "rc": "^0.5.1",
     "trycatch": "^1.5.11"
   },
   "devDependencies": {
