@@ -17,6 +17,7 @@ class Monster extends Character {
   get isAlive() { return this.health_ > 0; }
   get health() { return this.health_; }
   set health(value) {
+    debugger;
     if (value < 0) throw new Error('Health must be non-negative.');
     this.health_ = value;
   }

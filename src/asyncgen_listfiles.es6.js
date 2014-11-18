@@ -1,17 +1,15 @@
 // List all files recursively within a directory with maximum parallelism
 let path = require('path')
 let fs = require('fs')
-let thunker = require('thunker')
+let Promise = require('songbird')
 let co = require('co')
 let _ = require('lodash')
-
-fs = thunker(fs)
 
 function* statFile(filePath) {
 	let stat
 	try {
 		// Stat current file path
-		stat = yield fs.stat(filePath)
+		stat = yield fs.promise.stat(filePath)
 	} catch(e) {
 		// Ignore bad symlinks
 		if (e.code !== 'ENOENT') throw e
@@ -29,7 +27,7 @@ function* statFile(filePath) {
 
 function* listDir(dir) {
 	// Get all filenames in current directory
-	let files = yield fs.readdir(dir)
+	let files = yield fs.promise.readdir(dir)
 		, fileNames
 		, fileNamesIts
 
