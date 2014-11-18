@@ -1,7 +1,7 @@
 #Noderiety Node 100
 
 ##URL
-[https://github.com/Noderiety/javascript100/](https://github.com/Noderiety/node100/)
+[https://github.com/Noderiety/node100/](https://github.com/Noderiety/node100/)
 
 ##IRC
 \#noderiety on freenode.net
