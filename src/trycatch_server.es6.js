@@ -12,3 +12,5 @@ http.createServer((req, res) => {
 		res.end(err.stack)
 	})
 }).listen(8000)
+
+console.log('Listening at http://127.0.0.1:8000')

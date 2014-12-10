@@ -1,20 +1,29 @@
 # Co
 
-  [![Build Status](https://travis-ci.org/visionmedia/co.png?branch=master)](https://travis-ci.org/visionmedia/co)
+  [![Build Status](https://travis-ci.org/visionmedia/co.svg?branch=master)](https://travis-ci.org/visionmedia/co)
 
   Generator based flow-control goodness for nodejs and the browser, using
   thunks _or_ promises, letting you write non-blocking code in a nice-ish
   way.
-
-  Currently you must use the `--harmony-generators` flag when
-  running node 0.11.x to get access to generators. Or use gnode to spawn your node instance.
-  However note that performance degrades quickly compared to 0.11.x.
 
   Co is careful to relay any errors that occur back to the generator, including those
   within the thunk, or from the thunk's callback. "Uncaught" exceptions in the generator
   are passed to `co()`'s thunk.
 
   Make sure to view the [examples](https://github.com/visionmedia/co/tree/master/examples).
+
+## Platform Compatibility
+
+  When using node 0.11.x or greater, you must use the `--harmony-generators`
+  flag or just `--harmony` to get access to generators.
+
+  When using node 0.10.x and lower or browsers without generator support,
+  you must use [gnode](https://github.com/TooTallNate/gnode) and/or [regenerator](http://facebook.github.io/regenerator/).
+
+  When using node 0.8.x and lower or browsers without `setImmediate`,
+  you must include a `setImmediate` polyfill.
+  For a really simple polyfill, you may use [component/setimmediate.js](https://github.com/component/setimmediate.js).
+  For a more robust polyfill, you may use [YuzuJS/setImmediate](https://github.com/YuzuJS/setImmediate).
 
 ## Installation
 
@@ -215,8 +224,9 @@ co(function *(){
   Or if the generator functions do not require arguments, simply `yield` the function:
 
 ```js
+var co = require('co');
 var thunkify = require('thunkify');
-var request = require('superagent');
+var request = require('request');
 
 var get = thunkify(request.get);
 
@@ -354,9 +364,8 @@ co(function *(){
 
   On my machine 30,000 sequential stat()s takes an avg of 570ms,
   while the same number of sequential stat()s with `co()` takes
-  610ms, aka the overhead introduced by generators is _extremely_ negligable.
+  610ms, aka the overhead introduced by generators is _extremely_ negligible.
 
 ## License
 
   MIT
-

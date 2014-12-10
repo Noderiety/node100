@@ -1,10 +1,13 @@
 // Start of main tick
 // Require phase (Synchronous IO OK)
-let trycatch = require('trycatch')
+// Require Core modules
+let util = require('util')
+// Require NPM modules
+	, trycatch = require('trycatch')
+// Require Local modules
 	, Server = require('./lifecycle_server')
 
-// Configure phase (No more synchronous IO)
-let app = new Server(requestHandler, {port: 8000})
+require('songbird')
 
 function requestHandler(req, res) {
 	trycatch(() => {
@@ -21,6 +24,9 @@ function requestHandler(req, res) {
 		res.end()
 	})
 }
+
+// Configure phase (No more synchronous IO)
+let app = new Server(requestHandler, {port: 8000})
 
 // Initialization Phase (Asynchronous IO ONLY)
 app.initialize().then(() => {

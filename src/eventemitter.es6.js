@@ -1,8 +1,11 @@
 let EventEmitter = require('events').EventEmitter,
 		ee = new EventEmitter();
 
-ee.on('foo', (...args) => {
-	console.log(args);
+ee.on('bar', (...args) => {
+  console.log(args);
+});
+ee.on('bar', (...args) => {
+  console.log(args);
 });
 
 // ee.on('error', err => {
@@ -10,8 +13,10 @@ ee.on('foo', (...args) => {
 // });
 
 setTimeout(() => {
-	ee.emit('foo', {some: 'data'}, 'hello');
-	ee.emit('error', new Error('fail'));
+  ee.emit('bar');
+  ee.emit('bar', {some: 'data'}, 'world');
+  ee.emit('bar', {some: 'data'}, 'y\'all');
+	// ee.emit('error', new Error('fail'));
 }, 2000)
 
 console.log('listening on "foo" & "error" events')

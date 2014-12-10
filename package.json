@@ -6,6 +6,7 @@
     "bluebird": "~0.11.5-0",
     "co": "^3.0.6",
     "gens": "~1.0.2",
+    "learnyounode": "^1.0.6",
     "lodash": "^2.4.1",
     "promise-it-wont-hurt": "git://github.com/stevekane/promise-it-wont-hurt.git",
     "q": "~0.9.7",
@@ -15,7 +16,7 @@
     "songbird": "^1.0.1",
     "step": "0.0.5",
     "thunker": "0.0.4",
-    "traceur": "0.0.32",
+    "traceur": "~0.0.79",
     "trycatch": "^1.5.11"
   },
   "devDependencies": {
@@ -31,7 +32,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "learnyounode": "learnyounode",
+    "promise-it-wont-hurt": "promise-it-wont-hurt"
   },
   "repository": {
     "type": "git",

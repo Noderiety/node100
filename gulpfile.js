@@ -10,7 +10,7 @@ var gulp = require('gulp')
   , tracuerConfig = _.omit(rc('traceur'), ['config', '_'])
   , srcDir = 'src'
   , srcFiles = srcDir + '/*.es6.js'
-  , destDir = 'dist'
+  , destDir = 'lib'
   , traceurStackTraceMapInjection = 'require(\'traceur-source-maps\').install(require(\'traceur\'));'
 
 gulp.task('traceur', function () {
