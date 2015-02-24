@@ -16,7 +16,7 @@
 * 11:30: Error handling: `uncaughtException`, `throw`, callbacks, `try`/`catch` & [trycatch](https://github.com/CrabDude/trycatch)
 * **11:45: Lunch**
 * 12:45: [Core modules](http://nodejs.org/api/all.html): [path](http://nodejs.org/api/path.html), [querystring](http://nodejs.org/api/querystring.html), [utils](http://nodejs.org/api/util.html), [url](http://nodejs.org/api/url.html), [process](http://nodejs.org/api/process.html), [fs](http://nodejs.org/api/fs.html), [cluster](http://nodejs.org/api/cluster.html)
-* 1:00p: []Common Module](http://eirikb.github.io/nipster/):  [request](https://github.com/mikeal/request), [lodash](lodash.com/docs)
+* 1:00p: [Common Module](http://eirikb.github.io/nipster/):  [request](https://github.com/mikeal/request), [lodash](lodash.com/docs)
 * 1:15p: Workshops: 
   * [Learn You The Node.js For Much Win!](https://github.com/rvagg/learnyounode)
 * 2:15p: Control-flow: Callbacks
